@@ -23,7 +23,7 @@
 <p>Một lớp sự kiện mô tả một sự kiện Ryu được sinh ra trong hệ thống. Theo quy ước, lớp sự kiện được đặt tên có tiền tố “Event”. Những sự kiện được sinh ra hoặc bổ phần lõi của Ryu hoặc Ứng dụng Ryu.  Một ứng dụng Ryu có thể đăng ký interest của nó cho  một kiểu cụ thể của sự kiện bằng việc cung cấp một phương thức xử lý sử dụng ryu.controller.handler.set_ev_cls decorator</p>
 <h3 id="openflow-event-classes">OpenFlow event classes</h3>
 <p>ryu.controller.ofp_event module xuất những lớp sự kiện mô tả việc tiếp nhận của thông điệp OpenFlow từ những switch đã kết nối. Theo quy ước, chúng được đặt tên như là ryu.controller.ofp_event.EventOFPxxxx với xxxx là tên của thông điệp OpenFlow tương ứng. Ví dụ, EventOFPPacketIn cho thông điệp packet-in. Bộ phận điều khiển OpenFlow của Ryu tự động giải mã thông điệp OpenFlow được nhận từ switch và gửi những sự kiện đến ứng dụng Ryu sử dụng ryu.controller.handler.set_ev_cls. Những lớp sự kiện OpenFlow là những lớp con của những lớp đó.</p>
-<p><code>class ryu.controller.ofp_event.``EventOFPMsgBase(_msg_)</code></p>
+<p><code>class ryu.controller.ofp_event.EventOFPMsgBase(_msg_)</code></p>
 <p>The base class of OpenFlow event class.<br>
 Lớp sự kiện OpenFlow có ít nhất các thuộc tính sau:</p>
 
@@ -83,7 +83,7 @@ Lớp sự kiện OpenFlow có ít nhất các thuộc tính sau:</p>
 </tr>
 </tbody>
 </table><h2 id="ryu.controller.controller.datapath">ryu.controller.controller.Datapath</h2>
-<p><code>class ryu.controller.controller.Datapath(*socket*,*address*)</code></p>
+<p><code>class ryu.controller.controller.Datapath(socket,address)</code></p>
 <p>Class để mô tả một switch OpenFlow kết nối đến controller.<br>
 Một thể hiện có những thuộc tính sau</p>
 
